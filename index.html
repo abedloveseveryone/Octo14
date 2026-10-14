@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div>
+                <h1>Student Attendance</h1>
+                <p>Attendance Management System</p>
+            </div>
+            <span class="header-label">STUDENT PORTAL</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-heading">
+            <div>
+                <h2>Dashboard</h2>
+                <p>Manage and monitor daily student attendance.</p>
+            </div>
+
+            <div class="date-control">
+                <label for="attendanceDate">Attendance Date</label>
+                <input type="date" id="attendanceDate">
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <p>Total Students</p>
+                <h3 id="totalStudents">0</h3>
+            </article>
+
+            <article class="stat-card present-card">
+                <p>Present</p>
+                <h3 id="presentCount">0</h3>
+            </article>
+
+            <article class="stat-card absent-card">
+                <p>Absent</p>
+                <h3 id="absentCount">0</h3>
+            </article>
+
+            <article class="stat-card late-card">
+                <p>Late</p>
+                <h3 id="lateCount">0</h3>
+            </article>
+        </section>
+
+        <section class="panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Student Attendance List</h2>
+                    <p>Update the attendance status of each student.</p>
+                </div>
+            </div>
+
+            <div class="toolbar">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search student ID or name..."
+                    aria-label="Search students"
+                >
+
+                <button type="button" id="resetButton" class="button button-light">
+                    Reset Day
+                </button>
+
+                <button type="button" id="exportButton" class="button button-primary">
+                    Export CSV
+                </button>
+            </div>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Attendance Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable"></tbody>
+                </table>
+            </div>
+
+            <div class="table-footer">
+                <span id="studentCountLabel">0 students</span>
+                <span>Attendance records are organized by date.</span>
+            </div>
+        </section>
+
+        <section class="panel add-panel">
+            <div class="panel-heading">
+                <div>
+                    <h2>Add New Student</h2>
+                    <p>Enter the student's information below.</p>
+                </div>
+            </div>
+
+            <form id="studentForm" class="student-form">
+                <div class="form-field">
+                    <label for="studentId">Student ID</label>
+                    <input
+                        type="text"
+                        id="studentId"
+                        placeholder="e.g. 2026-001"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="studentName">Full Name</label>
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter full name"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="button button-primary add-button">
+                    + Add Student
+                </button>
+            </form>
+        </section>
+
+        <p class="storage-note">
+            Your records are saved locally in this browser and are not shared
+            with other devices.
+        </p>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Student Attendance System</p>
+        <p>Simple Student Attendance Management Project</p>
+    </footer>
+</body>
+</html>
