@@ -1,0 +1,398 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #263248;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #2563eb;
+    color: white;
+    padding: 22px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.header h1 {
+    font-size: 25px;
+}
+
+.header p {
+    color: #dbeafe;
+    font-size: 14px;
+}
+
+.header-label {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+main {
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    font-size: 26px;
+}
+
+.page-heading p,
+.panel-heading p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.date-control {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.date-control label,
+.form-field label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input {
+    font: inherit;
+}
+
+input[type="date"],
+input[type="text"],
+input[type="search"] {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #d7dfeb;
+    border-radius: 7px;
+    outline: none;
+    background: white;
+    color: #263248;
+}
+
+input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px #dbeafe;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 22px;
+    border: 1px solid #e5eaf2;
+    border-radius: 10px;
+    border-top: 4px solid #2563eb;
+}
+
+.stat-card p {
+    color: #718096;
+    font-size: 14px;
+}
+
+.stat-card h3 {
+    margin-top: 8px;
+    font-size: 32px;
+}
+
+.present-card {
+    border-top-color: #16a34a;
+}
+
+.present-card h3 {
+    color: #16a34a;
+}
+
+.absent-card {
+    border-top-color: #dc2626;
+}
+
+.absent-card h3 {
+    color: #dc2626;
+}
+
+.late-card {
+    border-top-color: #ea580c;
+}
+
+.late-card h3 {
+    color: #ea580c;
+}
+
+.panel {
+    background: white;
+    border: 1px solid #e5eaf2;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.panel-heading {
+    padding: 22px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.panel-heading h2 {
+    font-size: 19px;
+    margin-bottom: 4px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    padding: 18px 22px;
+    flex-wrap: wrap;
+}
+
+.toolbar input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.button {
+    padding: 11px 16px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.button-primary:hover {
+    background: #1d4ed8;
+}
+
+.button-light {
+    background: #edf2f7;
+    color: #334155;
+}
+
+.button-light:hover {
+    background: #e2e8f0;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 15px 22px;
+    border-top: 1px solid #edf0f5;
+    font-size: 14px;
+}
+
+th {
+    background: #f8fafc;
+    color: #64748b;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+}
+
+.status-select {
+    min-width: 115px;
+    padding: 8px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.status-Present {
+    color: #15803d;
+    background: #dcfce7;
+}
+
+.status-Absent {
+    color: #b91c1c;
+    background: #fee2e2;
+}
+
+.status-Late {
+    color: #c2410c;
+    background: #ffedd5;
+}
+
+.button-remove {
+    padding: 8px 11px;
+    color: #b91c1c;
+    background: #fee2e2;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.button-remove:hover {
+    background: #fecaca;
+}
+
+.empty-message {
+    text-align: center;
+    color: #718096;
+    padding: 30px;
+}
+
+.table-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 14px 22px;
+    border-top: 1px solid #edf0f5;
+    color: #718096;
+    font-size: 12px;
+}
+
+.student-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    align-items: end;
+    gap: 15px;
+    padding: 22px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.add-button {
+    height: 43px;
+    white-space: nowrap;
+}
+
+.storage-note {
+    text-align: center;
+    color: #718096;
+    font-size: 13px;
+    margin: 15px 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 22px;
+    background: white;
+    border-top: 1px solid #e5eaf2;
+    color: #718096;
+    font-size: 13px;
+}
+
+@media (max-width: 850px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .student-form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .add-button {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 550px) {
+    .container {
+        width: 92%;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .header-label {
+        display: none;
+    }
+
+    .page-heading h2 {
+        font-size: 23px;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-card h3 {
+        font-size: 27px;
+    }
+
+    .toolbar {
+        padding: 15px;
+    }
+
+    .toolbar input {
+        flex-basis: 100%;
+    }
+
+    .panel-heading {
+        padding: 18px;
+    }
+
+    .student-form {
+        grid-template-columns: 1fr;
+        padding: 18px;
+    }
+
+    .add-button {
+        grid-column: auto;
+    }
+
+    .table-footer {
+        flex-direction: column;
+    }
+}
